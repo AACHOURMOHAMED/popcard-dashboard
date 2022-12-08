@@ -13,11 +13,11 @@ const GeneralStats = () => {
   const { generalStatus } = generalStats;
 
   const activeUsers = Math.floor(
-    (generalStatus.active / generalStatus.total_collaborators) * 100
+    (generalStatus?.active / generalStatus?.total_collaborators) * 100
   );
 
   const onBording = Math.floor(
-    (generalStatus.onboarding / generalStatus.total_collaborators) * 100
+    (generalStatus?.onboarding / generalStatus?.total_collaborators) * 100
   );
   useEffect(() => {
     dispatch(fetchGeneralStats());
@@ -31,7 +31,7 @@ const GeneralStats = () => {
               <div className="flex flex-col leading-tight">
                 <span className=" font-medium text-[1.2rem]">Profils crees</span>
                 <span className="text-primary font-semibold text-[2rem]">
-                  {generalStatus.total_profiles}
+                  {generalStatus?.total_profiles}
                 </span>
               </div>
             </div>
@@ -42,7 +42,7 @@ const GeneralStats = () => {
               <div className="flex flex-col leading-tight">
                 <span className=" font-medium text-[1.2rem]">Total Utilisateurs</span>
                 <span className="text-primary font-semibold text-[2rem]">
-                  {generalStatus.total_collaborators}
+                  {generalStatus?.total_collaborators}
                 </span>
               </div>
             </div>
