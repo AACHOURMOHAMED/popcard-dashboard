@@ -151,7 +151,6 @@ export const fetchTrackingChart = () => async (dispatch) => {
       },
     })
 
-    console.log(data);
     dispatch({
       type: types.GET_TRAKINGCHART_SUCCESS,
       payload: data,
@@ -181,13 +180,11 @@ export const fetchChiffre = () => async (dispatch) => {
       action: 5,
     }, config);
 
-
     dispatch({
       type: types.GET_CHIFFRE_SUCCESS,
       payload: data,
     });
 
-    console.log(data);
   } catch (error) {
     dispatch({
       type: types.GET_GENERALSTATUS_FAIL,
