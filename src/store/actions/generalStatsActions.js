@@ -7,8 +7,19 @@ export const fetchGeneralStats = () => async (dispatch) => {
   try {
     dispatch({ type: types.GET_GENERALSTATUS_REQUEST });
 
-    const { data } = await axios.post(`${URL_BASIC}/test`, {
-      action: 0,
+    const { data } = await axios({
+      method: "post",
+      url: `${URL_BASIC}/test-db`,
+      headers: {
+        "test-user": "mohamed"
+      },
+      data: {
+        action: 1,
+        paging: {
+          page: 0,
+          limit: 10,
+        }
+      },
     });
 
     dispatch({
@@ -33,7 +44,10 @@ export const fetchTopProfiles = () => async (dispatch) => {
 
     const { data } = await axios({
       method: "post",
-      url: `${URL_BASIC}/test`,
+      url: `${URL_BASIC}/test-db`,
+      headers: {
+        "test-user": "mohamed"
+      },
       data: {
         action: 1,
         paging: {
@@ -64,7 +78,10 @@ export const fetchTopActivities = () => async (dispatch) => {
 
     const { data } = await axios({
       method: "post",
-      url: `${URL_BASIC}/test`,
+      url: `${URL_BASIC}/test-db`,
+      headers: {
+        "test-user": "mohamed"
+      },
       data: {
         action: 3,
         paging: {
@@ -95,7 +112,10 @@ export const fetchProfileStats = () => async (dispatch) => {
 
     const { data } = await axios({
       method: "post",
-      url: `${URL_BASIC}/test`,
+      url: `${URL_BASIC}/test-db`,
+      headers: {
+        "test-user": "mohamed"
+      },
       data: {
         action: 2,
       },
@@ -122,7 +142,10 @@ export const fetchTrackingChart = () => async (dispatch) => {
 
     const { data } = await axios({
       method: "post",
-      url: `${URL_BASIC}/test`,
+      url: `${URL_BASIC}/test-db`,
+      headers: {
+        "test-user": "mohamed"
+      },
       data: {
         action: 4,
       },
@@ -148,13 +171,16 @@ export const fetchChiffre = () => async (dispatch) => {
   try {
     dispatch({ type: types.GET_GENERALSTATUS_REQUEST});
 
-    const { data } = await axios({
-      method: "post",
-      url: `${URL_BASIC}/test`,
-      data: {
-        action: 5,
-      },
-    })
+    const config = {
+      headers: {
+        "test-user": "mohamed"
+      }
+    }
+
+    const { data } = await axios.post(`${URL_BASIC}/test-db`, {
+      action: 5,
+    }, config);
+    
 
     dispatch({
       type: types.GET_CHIFFRE_SUCCESS,
