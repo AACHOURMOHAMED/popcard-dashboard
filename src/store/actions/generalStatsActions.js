@@ -14,7 +14,7 @@ export const fetchGeneralStats = () => async (dispatch) => {
         "test-user": "mohamed"
       },
       data: {
-        action: 1,
+        action: 0,
         paging: {
           page: 0,
           limit: 10,
@@ -180,7 +180,7 @@ export const fetchChiffre = () => async (dispatch) => {
     const { data } = await axios.post(`${URL_BASIC}/test-db`, {
       action: 5,
     }, config);
-    
+
 
     dispatch({
       type: types.GET_CHIFFRE_SUCCESS,

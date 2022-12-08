@@ -21,7 +21,6 @@ const ChiffreChart = () => {
     dispatch(fetchChiffre());
   }, [dispatch]);
 
-  console.log(chiffre);
   const data = {
     labels: chiffre?.data.map(
       (item) => item._id.day + "/" + item._id.month + "/" + item._id.year
@@ -45,7 +44,7 @@ const ChiffreChart = () => {
       },
       {
         label: "Nombre d'utilisateurs",
-        data: chiffre?.data.map((item) => item.total_open),
+        data: chiffre?.data.map((item) => item.total_reductions),
         backgroundColor: "",
         borderColor: "rgb(78, 49, 49)",
         borderWidth: 1,
@@ -137,11 +136,11 @@ const ChiffreChart = () => {
         <div className="flex items-center justify-end mb-5">
           <div className="flex items-center ">
             <div className="w-5 h-5 rounded-full bg-[#4E3131] mr-2" />
-            <h2 className="text-xl font-semibold">Total Opens</h2>
+            <h2 className="text-xl font-semibold">Reductions commerciales</h2>
           </div>
           <div className="flex items-center ml-10">
             <div className="w-5 h-5 rounded-full bg-[#CCB7B7] mr-2" />
-            <h2 className="text-xl font-semibold">Total Clicks</h2>
+            <h2 className="text-xl font-semibold">Chiffre d'affaires</h2>
           </div>
         </div>
         <div
