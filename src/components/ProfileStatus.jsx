@@ -24,7 +24,7 @@ const ProfileStatus = () => {
       <Card>
         <div className="flex flex-col items-center">
           <div className="flex justify-around w-full mt-2">
-            <h2 className="text-primary font-semibold text-[1.2rem] max-w-[130px]">
+            <h2 className="text-primary font-semibold text-[1.2rem] w-[130px] ml-[5rem]">
               Profil
             </h2>
             <h2 className="text-primary font-semibold text-[1.2rem] max-w-[130px]">
