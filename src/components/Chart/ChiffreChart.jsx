@@ -10,6 +10,8 @@ import {
 } from "chart.js";
 import Card from "../Card";
 import { fetchChiffre } from "../../store/actions/generalStatsActions";
+import { BiCoinStack } from "react-icons/bi";
+import { AiOutlinePercentage } from "react-icons/ai";
 
 chartjs.register(LineElement, CategoryScale, LinearScale, PointElement);
 
@@ -93,6 +95,15 @@ const ChiffreChart = () => {
     },
   };
 
+  // sum of total_ca
+  const total_ca_sum = chiffre?.data.reduce((acc, item) => {
+    return acc + item.total_ca;
+  }, 0);
+
+  // sum of total_reductions
+  const total_reductions_sum = chiffre?.data.reduce((acc, item) => {
+    return acc + item.total_reductions;
+  }, 0);
   return (
     <Card>
       <div className="w-full">
@@ -149,6 +160,22 @@ const ChiffreChart = () => {
         "
         >
           <Line data={data} options={options} />
+        </div>
+        <div className="flex items-center justify-start my-[2rem]">
+          <div className="flex items-center bg-secondary px-5 py-3 rounded-2xl mr-[2rem]">
+            <BiCoinStack className="bg-primary text-white text-[2.5rem] p-1 rounded-full mr-[1rem]" />
+            <div>
+              <h2 className="text-xl font-semibold">Total CA sur la periode</h2>
+              <span className="text-[1.5rem] font-semibold">{total_ca_sum} Dhs</span>
+            </div>
+          </div>
+          <div className="flex items-center bg-secondary px-5 py-3 rounded-2xl">
+            <AiOutlinePercentage className="bg-primary text-white text-[2.5rem] p-1 rounded-full mr-[1rem]" />
+            <div>
+              <h2 className="text-xl font-semibold">Total CA sur la periode</h2>
+              <span className="text-[1.5rem] font-semibold">{total_reductions_sum} Dhs</span>
+            </div>
+          </div>
         </div>
       </div>
     </Card>
