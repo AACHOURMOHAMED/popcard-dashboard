@@ -75,7 +75,7 @@ const TopActivites = () => {
               </div>
             ))}
           </div>
-          <button className="bg-black text-white py-2 px-4 rounded-3xl mt-2 xl:my-[1.2rem]">Charger toute la list</button>
+          <button className="bg-black text-white py-2 px-4 rounded-3xl mt-4 xl:my-[1.2rem]">Charger toute la list</button>
         </div>
       </Card>
     </div>
