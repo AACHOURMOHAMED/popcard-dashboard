@@ -8,13 +8,13 @@ import {
   LinearScale,
   PointElement,
 } from "chart.js";
-import DatePicker from 'react-datepicker'
-import 'react-datepicker/dist/react-datepicker.css'
+import DatePicker from "react-datepicker";
+import "react-datepicker/dist/react-datepicker.css";
 import Card from "../Card";
 import { fetchChiffre } from "../../store/actions/generalStatsActions";
 import { BiCoinStack } from "react-icons/bi";
 import { AiOutlinePercentage } from "react-icons/ai";
-import { BsFillCalendar2WeekFill } from "react-icons/bs"
+import { BsFillCalendar2WeekFill } from "react-icons/bs";
 
 chartjs.register(LineElement, CategoryScale, LinearScale, PointElement);
 
@@ -29,9 +29,34 @@ const ChiffreChart = () => {
   }, [dispatch]);
 
   const data = {
-    labels: chiffre?.data.map(
-      (item) => item._id.day + "/" + item._id.month + "/" + item._id.year
-    ),
+    labels: chiffre?.data.map((item) => {
+      const month = item._id.month;
+      const monthName =
+        month === 1
+          ? "Janvier"
+          : month === 2
+          ? "Février"
+          : month === 3
+          ? "Mars"
+          : month === 4
+          ? "Avril"
+          : month === 5
+          ? "Mai"
+          : month === 6
+          ? "Juin"
+          : month === 7
+          ? "Juillet"
+          : month === 8
+          ? "Août"
+          : month === 9
+          ? "Septembre"
+          : month === 10
+          ? "Octobre"
+          : month === 11
+          ? "Novembre"
+          : "Décembre";
+      return item._id.day + " " +monthName.slice(0, 3) + " " + item._id.year;
+    }),
     datasets: [
       {
         label: "Nombre d'utilisateurs",
@@ -91,7 +116,7 @@ const ChiffreChart = () => {
       },
       y: {
         ticks: {
-          callback: (value) => value ,
+          callback: (value) => value,
         },
         grid: {
           borderDash: [10],
@@ -147,11 +172,15 @@ const ChiffreChart = () => {
         <div className="flex items-center justify-end mb-5 mr-[3rem]">
           <div className="flex items-center ">
             <div className="xl:w-5 xl:h-5 h-2 w-2 rounded-full bg-[#4E3131] mr-2" />
-            <h2 className="xl:text-xl text-[0.8rem] font-semibold">Reductions commerciales</h2>
+            <h2 className="xl:text-xl text-[0.8rem] font-semibold">
+              Reductions commerciales
+            </h2>
           </div>
           <div className="flex items-center ml-10">
             <div className="xl:w-5 xl:h-5 h-2 w-2 rounded-full bg-[#CCB7B7] mr-2" />
-            <h2 className="xl:text-xl text-[0.8rem] font-semibold">Chiffre d'affaires</h2>
+            <h2 className="xl:text-xl text-[0.8rem] font-semibold">
+              Chiffre d'affaires
+            </h2>
           </div>
         </div>
         <div
@@ -165,15 +194,23 @@ const ChiffreChart = () => {
           <div className="flex items-center bg-secondary px-5 py-3 rounded-2xl mr-[2rem]">
             <BiCoinStack className="bg-primary text-white text-[2rem] xl:text-[2.5rem] p-1 rounded-full mr-[1rem]" />
             <div>
-              <h2 className="xl:text-xl font-semibold">Total CA sur la periode</h2>
-              <span className="xl:text-[1.5rem] font-bold">{total_ca_sum} Dhs</span>
+              <h2 className="xl:text-xl font-semibold">
+                Total CA sur la periode
+              </h2>
+              <span className="xl:text-[1.5rem] font-bold">
+                {total_ca_sum} Dhs
+              </span>
             </div>
           </div>
           <div className="flex items-center bg-secondary px-5 py-3 rounded-2xl">
             <AiOutlinePercentage className="bg-primary text-white text-[2rem] xl:text-[2.5rem] p-1 rounded-full mr-[1rem]" />
             <div>
-              <h2 className="xl:text-xl font-semibold">Total CA sur la periode</h2>
-              <span className="xl:text-[1.5rem] font-bold">{total_reductions_sum} Dhs</span>
+              <h2 className="xl:text-xl font-semibold">
+                Total CA sur la periode
+              </h2>
+              <span className="xl:text-[1.5rem] font-bold">
+                {total_reductions_sum} Dhs
+              </span>
             </div>
           </div>
         </div>
