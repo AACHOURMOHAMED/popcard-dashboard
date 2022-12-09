@@ -14,12 +14,12 @@ const DashboardScreen = () => {
   return (
     <>
         <Header />
-        <div className='flex items-center text-primary font-semibold mt-[4rem]'>
-            <MdDashboard className="mr-2 text-[3rem]" />
-            <h1 className='text-[3rem]'>Dashboard</h1>
+        <div className='flex items-center text-primary font-medium mt-[4rem]'>
+            <MdDashboard className="mr-2 text-[1.5rem]" />
+            <h1 className='text-[1.5rem]'>Dashboard</h1>
         </div>
         <hr  className='border-none opacity-80 h-[1px] bg-secondary'/>
-        <div className='mt-[5rem] flex justify-between gap-4'>
+        <div className='mt-[3rem] xl:mt-[4rem] flex justify-between gap-4'>
           <GeneralStats />
           <TopProfiles  />
         </div>

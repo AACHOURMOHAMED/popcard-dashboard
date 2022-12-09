@@ -17,30 +17,30 @@ const TopProfiles = () => {
     <div className="w-full max-w-[600px]">
       <div className="flex items-center text-primary mb-6">
         <GiConcentricCrescents className="text-[2rem] mr-2" />
-        <h2 className="text-2xl font-semibold">
+        <h2 className="text-lg xl:text-2xl font-semibold">
           Top 10 des profils par nomber d'utilisateurs
         </h2>
       </div>
       <Card>
         <div className="flex flex-col items-center">
-          <div className="flex justify-around w-full mt-2">
-            <h2 className="text-primary font-semibold text-[1.2rem]">Profil</h2>
-            <h2 className="text-primary font-semibold text-[1.2rem]">
+          <div className="flex justify-around w-full mt-1">
+            <h2 className="text-primary font-semibold text-[1.1rem]">Profil</h2>
+            <h2 className="text-primary font-semibold text-[1.1rem]">
               Nb d'utilisateurs
             </h2>
           </div>
-          <hr className="my-5 bg-secondary border-dashed w-full" />
-          <div className="max-h-[200px] overflow-auto w-full 
+          <hr className="my-3 bg-secondary border-dashed w-full" />
+          <div className="max-h-[170px] xl:max-h-[200px] overflow-auto w-full 
            scrollbar-thump-primary 
           ">
             {topProfiles?.data.map((profile, index) => (
               <div key={index}>
                 <div  className="flex w-full bg-bl max-h-[50px]">
                   <div className="flex items-center justify-around w-full">
-                    <span className="bg-primary text-white text-center rounded-full  w-[25px] h-[25px]">
+                    <div className="flex  min-w-[300px] items-center">
+                    <span className="bg-primary text-white text-center rounded-full  w-[25px] h-[25px] mr-4">
                       {index + 1}
                     </span>
-                    <div className="flex  min-w-[300px] items-center">
                       {profile.logo ? (
                         <img
                           className="w-[20px] h-[20px] rounded-full"
@@ -57,11 +57,11 @@ const TopProfiles = () => {
                     </span>
                   </div>
                 </div>
-                <hr className="my-3 bg-secondary border-dashed w-full" />
+                <hr className="my-2 xl:my-3 bg-secondary border-dashed w-full" />
               </div>
             ))}
           </div>
-          <button className="bg-black text-white py-2 px-4 rounded-3xl my-[1.2rem]">Charger toute la list</button>
+          <button className="bg-black text-white py-2 px-4 rounded-3xl mb-1 mt-[1rem] xl:my-[1.2rem]">Charger toute la list</button>
         </div>
       </Card>
     </div>

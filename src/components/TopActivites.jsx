@@ -16,22 +16,22 @@ const TopActivites = () => {
   return (
     <div className="w-full ">
       <div className="flex items-center text-primary mb-6">
-        <GiConcentricCrescents className="text-[2rem] mr-2" />
-        <h2 className="text-2xl font-semibold">
+        <GiConcentricCrescents className="text-[1.5rem] xl:text-[2rem] mr-2" />
+        <h2 className="text-lg xl:text-2xl font-semibold">
           Top 10 des utilisateurs par activite
         </h2>
       </div>
       <Card>
         <div className="flex flex-col items-center">
           <div className="flex justify-around w-full mt-2">
-            <h2 className="text-primary min-w-[200px] ml-4 font-semibold text-[1.2rem]">Utilisateur</h2>
-            <h2 className="text-primary font-semibold text-[1.2rem]">Nb Ouvertures</h2>
-            <h2 className="text-primary font-semibold text-[1.2rem]">Nb Ajouts</h2>
-            <h2 className="text-primary font-semibold text-[1.2rem]">
+            <h2 className="text-primary min-w-[200px] ml-4 font-semibold xl:text-[1.2rem]">Utilisateur</h2>
+            <h2 className="text-primary font-semibold xl:text-[1.2rem]">Nb Ouvertures</h2>
+            <h2 className="text-primary font-semibold xl:text-[1.2rem]">Nb Ajouts</h2>
+            <h2 className="text-primary font-semibold xl:text-[1.2rem]">
               Profil
             </h2>
           </div>
-          <hr className="my-5 bg-secondary border-dashed w-full" />
+          <hr className="xl:my-5 my-2 bg-secondary border-dashed w-full" />
           <div className="max-h-[200px] overflow-auto w-full 
            scrollbar-thump-primary 
           ">
@@ -60,22 +60,22 @@ const TopActivites = () => {
                       <span className="ml-2">{act.first_name}</span>
                       <span className="ml-2">{act.last_name}</span>
                     </div>
-                    <span className="font-semibold text-[1.2rem] min-w-[100px]">
+                    <span className="font-semibold xl:text-[1.2rem] min-w-[100px]">
                       {act.total_open}
                     </span>
-                    <span className="font-semibold text-[1.2rem] min-w-[100px]">
+                    <span className="font-semibold xl:text-[1.2rem] min-w-[100px]">
                       {act.total_add_to_contact}
                     </span>
-                    <span className="font-semibold text-[1.2rem] min-w-[100px]">
+                    <span className="font-semibold xl:text-[1.2rem] min-w-[100px]">
                       {act.profile}
                     </span>
                   </div>
                 </div>
-                <hr className="my-3 bg-secondary border-dashed w-full" />
+                <hr className="xl:my-3 my-2 bg-secondary border-dashed w-full" />
               </div>
             ))}
           </div>
-          <button className="bg-black text-white py-2 px-4 rounded-3xl my-[1.2rem]">Charger toute la list</button>
+          <button className="bg-black text-white py-2 px-4 rounded-3xl mt-2 xl:my-[1.2rem]">Charger toute la list</button>
         </div>
       </Card>
     </div>

@@ -33,7 +33,7 @@ const ChiffreChart = () => {
         data: chiffre?.data.map((item) => item.total_ca),
         backgroundColor: "rgb(204, 183, 183)",
         borderColor: "rgb(204, 183, 183)",
-        borderWidth: 1,
+        borderWidth: 4,
         pointBackgroundColor: "rgb(204, 183, 183)",
         pointBorderColor: "rgb(204, 183, 183)",
         pointRadius: 5,
@@ -41,7 +41,7 @@ const ChiffreChart = () => {
         pointHoverBackgroundColor: "rgb(204, 183, 183)",
         pointHoverBorderColor: "rgb(204, 183, 183)",
         pointHitRadius: 30,
-        pointBorderWidth: 2,
+        pointBorderWidth: 0,
         tension: 0.5,
       },
       {
@@ -49,7 +49,7 @@ const ChiffreChart = () => {
         data: chiffre?.data.map((item) => item.total_reductions),
         backgroundColor: "",
         borderColor: "rgb(78, 49, 49)",
-        borderWidth: 1,
+        borderWidth: 4,
         pointBackgroundColor: "rgb(78, 49, 49)",
         pointBorderColor: "rgb(78, 49, 49)",
         pointRadius: 5,
@@ -57,7 +57,7 @@ const ChiffreChart = () => {
         pointHoverBackgroundColor: "rgb(78, 49, 49)",
         pointHoverBorderColor: "rgb(78, 49, 49)",
         pointHitRadius: 30,
-        pointBorderWidth: 2,
+        pointBorderWidth: 0,
         tension: 0.5,
       },
     ],
@@ -111,8 +111,9 @@ const ChiffreChart = () => {
           <div className="flex flex-col items-start mr-5">
             <h2 className="text-xl font-semibold">Date de debut</h2>
             <select className="border-secondary rounded-lg border-opacity-60 border-[1px] py-2 px-6 mt-2 focus:outline-none">
-              {chiffre?.data.map((item) => (
+              {chiffre?.data.map((item, index) => (
                 <option
+                  key={index}
                   value={
                     item._id.day + "/" + item._id.month + "/" + item._id.year
                   }
@@ -125,8 +126,9 @@ const ChiffreChart = () => {
           <div className="flex flex-col items-start mr-5">
             <h2 className="text-xl font-semibold">Date de fin</h2>
             <select className="border-secondary rounded-lg border-opacity-60 border-[1px] py-2 px-6 mt-2 focus:outline-none">
-              {chiffre?.data.map((item) => (
+              {chiffre?.data.map((item, index) => (
                 <option
+                  key={index}
                   value={
                     item._id.day + "/" + item._id.month + "/" + item._id.year
                   }

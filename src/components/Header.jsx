@@ -11,18 +11,18 @@ const Header = () => {
   return (
     <header className="flex items-center justify-between">
       <div className="flex flex-col">
-        <h1 className="font-bold text-[2rem]">Bonjour Aymane!</h1>
-        <p>
+        <h1 className="font-bold text-[1.2rem] xl:text-[2rem]">Bonjour Aymane!</h1>
+        <p className="text-[]">
           Nous somme le {day} {dayOfMonth} {month} {year}
         </p>
       </div>
-      <div className="flex flex-row-reverse justify-between rounded-full bg-white shadow-lg py-2  px-4 w-[15rem]">
+      <div className="flex flex-row-reverse justify-between rounded-full bg-white shadow-lg py-2  px-4 w-[11rem] xl:w-[15rem]">
         <img
           src={imgProfile}
           alt="profile"
-          className="rounded-full w-[4rem] h-[4rem] object-cover"
+          className="rounded-full xl:w-[4rem] xl:h-[4rem] w-[2.5rem] h-[2.5rem] object-cover"
         />
-        <h2 className="flex items-center text-primary font-medium text-[1.4rem]">
+        <h2 className="flex items-center text-primary font-medium xl:text-[1.4rem]">
           <IoIosHelpBuoy className="mr-1" />
           Aide
         </h2>

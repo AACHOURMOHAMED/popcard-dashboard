@@ -16,30 +16,30 @@ const ProfileStatus = () => {
   return (
     <div className="w-full ">
       <div className="flex items-center text-primary mb-6">
-        <GiConcentricCrescents className="text-[2rem] mr-2" />
-        <h2 className="text-2xl font-semibold">
+        <GiConcentricCrescents className="text-[1.5rem] xl:text-[2rem] mr-2" />
+        <h2 className="text-lg xl:text-2xl font-semibold">
           Top 10 des utilisateurs par activite
         </h2>
       </div>
       <Card>
         <div className="flex flex-col items-center">
           <div className="flex justify-around w-full mt-2">
-            <h2 className="text-primary font-semibold text-[1.2rem] w-[130px] ml-[5rem]">
+            <h2 className="text-primary font-semibold xl:text-[1.2rem] w-[130px] ml-[5rem]">
               Profil
             </h2>
-            <h2 className="text-primary font-semibold text-[1.2rem] max-w-[130px]">
+            <h2 className="text-primary font-semibold xl:text-[1.2rem] max-w-[130px]">
               Utilisateur en Onboarding
             </h2>
-            <h2 className="text-primary font-semibold text-[1.2rem] max-w-[130px]">
+            <h2 className="text-primary font-semibold xl:text-[1.2rem] max-w-[130px]">
               {" "}
               utilisateurs Actifs
             </h2>
-            <h2 className="text-primary font-semibold text-[1.2rem] max-w-[130px]">
+            <h2 className="text-primary font-semibold xl:text-[1.2rem] max-w-[130px]">
               {" "}
               Comptes desactives
             </h2>
           </div>
-          <hr className="my-5 bg-secondary border-dashed w-full" />
+          <hr className="xl:my-5 my-2 bg-secondary border-dashed w-full" />
           <div
             className="max-h-[200px] overflow-auto w-full 
            scrollbar-thump-primary 
@@ -129,7 +129,7 @@ const ProfileStatus = () => {
               </div>
             ))}
           </div>
-          <button className="bg-black text-white py-2 px-4 rounded-3xl my-[1.2rem]">
+          <button className="bg-black text-white py-2 px-4 rounded-3xl my-[0.1rem] xl:my-[1.2rem]">
             Charger toute la list
           </button>
         </div>

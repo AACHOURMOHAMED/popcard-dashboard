@@ -8,7 +8,7 @@ function App() {
       <div className='flex'>
         <Navbar />
         <div className='w-[16rem] h-[100vh] left-0'/>
-        <div className=' mt-[4rem] max-w-[1000px] w-full m-auto'>
+        <div className=' mt-[2rem] max-w-[900px] w-full m-auto'>
           <Routes>
             <Route path="/" element={<DashboardScreen />} />
             <Route path='/profile' element={<h1>Hello</h1>}/>
