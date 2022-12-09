@@ -89,7 +89,7 @@ const TrackingChart = () => {
       },
       y: {
         ticks: {
-          callback: (value) => value + "k",
+          callback: (value) => value,
         },
         grid: {
           borderDash: [10],
