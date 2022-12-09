@@ -2,6 +2,29 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+  font-family: "Steradian";
+  src: url(font/Steradian\ Bold.otf) format(
+    "opentype"
+  );
+}
+
+@font-face {
+  font-family: "Steradian";
+  src: url(font/Steradian\ Medium.otf) format(
+    "opentype"
+  );
+  font-weight: 300;
+}
+
+@font-face {
+  font-family: "Steradian";
+  src: url(font/Steradian\ Regular.otf) format(
+    "opentype"
+  );
+  font-weight: 400;
+}
+
 body {
   background-color: #fffaf5;
   font-family: 'Steradian', sans-serif;
