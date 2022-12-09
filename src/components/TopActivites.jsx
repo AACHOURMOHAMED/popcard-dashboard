@@ -31,8 +31,8 @@ const TopActivites = () => {
               Profil
             </h2>
           </div>
-          <hr className="xl:my-5 my-2 bg-secondary border-dashed w-full" />
-          <div className="max-h-[200px] overflow-auto w-full 
+          <hr className="xl:my-5 my-3 bg-secondary border-dashed w-full" />
+          <div className="max-h-[160px] xl:max-h-[200px] overflow-auto w-full 
            scrollbar-thump-primary 
           ">
             {topActivities?.data.map((act, index) => (
@@ -71,7 +71,7 @@ const TopActivites = () => {
                     </span>
                   </div>
                 </div>
-                <hr className="xl:my-3 my-2 bg-secondary border-dashed w-full" />
+                <hr className="xl:my-3 my-2 bg-secondary border-dashed  w-full" />
               </div>
             ))}
           </div>
