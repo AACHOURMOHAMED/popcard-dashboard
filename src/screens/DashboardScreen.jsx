@@ -29,22 +29,22 @@ const DashboardScreen = () => {
         <div className='mt-[5rem] flex justify-between gap-4'>
           <ProfileStatus />
         </div>
-        <div className='flex items-center justify-start mt-[5rem]'>
+        <div className='flex items-center justify-start mt-[3rem] xl:mt-[5rem]'>
           <AiFillPieChart 
-            className="mr-2 text-[2rem] text-primary"
+            className="mr-2 text-[1.5rem] xl:text-[2rem] text-primary"
           />
-          <h1 className='text-[2rem] font-semibold text-primary '>Statistiques d'usage des cartes de visites</h1>
+          <h1 className='xl:text-[2rem] font-semibold text-primary '>Statistiques d'usage des cartes de visites</h1>
         </div>
-        <div className='mt-[4rem]  gap-4'>
+        <div className='mt-[2rem]  gap-4'>
           <TrackingChart />
         </div>
-        <div className='flex items-center justify-start mt-[5rem] text-primary'>
+        <div className='flex items-center justify-start mt-[3rem] xl:mt-[5rem]'>
           <GrMoney 
-            className="mr-2 text-[2rem] text-primary"
+            className="mr-2 text-[1.5rem] xl:text-[2rem] text-primary"
           />
-          <h1 className='text-[2rem] font-semibold text-primary '>Suivi du CA</h1>
+          <h1 className='xl:text-[2rem] font-semibold text-primary '>Suivi du CA</h1>
         </div>
-        <div className='mt-[4rem]  gap-4 mb-[5rem]'>
+        <div className='xl:mt-[4rem] mt-[2rem]  gap-4 mb-[5rem]'>
           <ChiffreChart />
         </div>
     </>
