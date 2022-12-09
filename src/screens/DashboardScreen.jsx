@@ -26,7 +26,7 @@ const DashboardScreen = () => {
         <div className='mt-[5rem] flex justify-between gap-4'>
           <TopActivites />
         </div>
-        <div className='mt-[5rem] flex justify-between gap-4'>
+        <div className='xl:mt-[5rem] mt-[2rem] flex justify-between gap-4'>
           <ProfileStatus />
         </div>
         <div className='flex items-center justify-start mt-[3rem] xl:mt-[5rem]'>

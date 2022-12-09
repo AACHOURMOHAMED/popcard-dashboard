@@ -3,6 +3,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { GiConcentricCrescents } from "react-icons/gi";
 import Card from "./Card";
 import { fetchProfileStats } from "../store/actions/generalStatsActions";
+import { AiFillPieChart } from "react-icons/ai";
 
 const ProfileStatus = () => {
   const dispatch = useDispatch();
@@ -16,9 +17,9 @@ const ProfileStatus = () => {
   return (
     <div className="w-full ">
       <div className="flex items-center text-primary mb-6">
-        <GiConcentricCrescents className="text-[1.5rem] xl:text-[2rem] mr-2" />
+        <AiFillPieChart className="text-[1.5rem] xl:text-[2rem] mr-2" />
         <h2 className="text-lg xl:text-2xl font-semibold">
-          Top 10 des utilisateurs par activite
+          Statistiques par profil
         </h2>
       </div>
       <Card>
