@@ -17,11 +17,13 @@ import "react-datepicker/dist/react-datepicker.css";
 chartjs.register(LineElement, CategoryScale, LinearScale, PointElement);
 
 const TrackingChart = () => {
-  const [date, setDate] = useState(new Date());
-
-  const dispatch = useDispatch();
   const tracking = useSelector((state) => state.generalStats);
   const { trackingChart, topProfiles } = tracking;
+  
+  const [date, setDate] = useState(new Date());
+  const [date2,setDate2] = useState(new Date())
+    
+    const dispatch = useDispatch();
   useEffect(() => {
     dispatch(fetchTrackingChart());
   }, [dispatch]);
@@ -140,8 +142,8 @@ const TrackingChart = () => {
           <div className=" relative flex flex-col items-start mr-5">
             <h2 className="xl:text-xl font-semibold">Date de fin</h2>
             <DatePicker
-              selected={date}
-              onChange={(date) => setDate(date)}
+              selected={date2}
+              onChange={(date2) => setDate2(date2)}
               dateFormat="dd/MM/yyyy"
               className="border-secondary relative rounded-lg border-opacity-60 border-[1px] py-2 px-6 mt-2 focus:outline-none"
             />
